@@ -1,15 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE>Vista3</TITLE>
+<META http-equiv="Content-Script-Type" content="text/tcl">
 
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible">
+</HEAD>
+<BODY>
+<SCRIPT>
 
-<title>Time right now is: </title>
-</head>
-<tr>Bienvenido a la vista 3000</tr>
+    // Paquete necesario para conectar a bases de datos MySQL.
+    var mysql = require('mysql');
+    // Consulta SQL.
+    var sql = 'SELECT * FROM busqueda3_Cantidad_Usuarios_Por_Edad';
+    
+    // Parámetros de conexión a la base de datos.
+    var con = mysql.createConnection({
+        host    :'204.48.30.100',
+        user    : 'root',
+        password: 'PASSWORD',
+        database: 'Spotify'
+    });
+    
+    // Funcion que nos permite comprobar la conexión a la base de datos.
+     con.connect(function(err) {
+       if (err) throw err;
+       console.log("Connected!");
+       //console.log(sql);
+    
+       con.query('SELECT * FROM busqueda3_Cantidad_Usuarios_Por_Edad',(err,result) => {
+        console.log(result);
+       
+    
+    });
+    });
 
-<body>
-</body>
-</html>
+</SCRIPT>
+</BODY>
+</HTML>
