@@ -1,8 +1,11 @@
 
                            const express = require ('express');
+                           require('dotenv').config();
                             const app = express();
 
-                            app.get('/', (req,res) =>  {
+                            app.use(express.static('paginas'));
+
+                            app.get('/paginas', (req,res) =>  {
 
                                 res.sendFile(__dirname + '/paginas/index.html');
                             });
