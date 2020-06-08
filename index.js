@@ -2,7 +2,7 @@ const express = require ('express');
 const app = express();
 
 <<<<<<< HEAD
-app.get('/', (req,res) =>res.send('Hola Mundo new 123 \n'));
+app.get('/', (req,res) =>res.send('Hola Mundo Aton Nuevo'));
 //dfgdfgdfg
 
 
