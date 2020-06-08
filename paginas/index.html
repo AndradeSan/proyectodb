@@ -1,54 +1,15 @@
-
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible">
-
-<title>Time right now is: </title>
-</head>
-<Center><tr>Bienvenido a mi Pagina10 </tr></Center>
-<body>
-   <script>
-
-
-// Paquete necesario para conectar a bases de datos MySQL.
-var mysql = require('mysql');
-// Consulta SQL.
-var sql = 'SELECT * FROM busqueda1 LIMIT 10';
-
-// Parámetros de conexión a la base de datos.
-var con = mysql.createConnection({
-    host    :'204.48.30.100',
-    user    : 'root',
-    password: 'PASSWORD',
-    database: 'Spotify'
-});
-
-// Funcion que nos permite comprobar la conexión a la base de datos.
- con.connect(function(err) {
-   if (err) throw err;
-   console.log("Connected!");
-   //console.log(sql);
-
-   con.query('SELECT * FROM busqueda2',(err,result) => {
-    console.log(result);
-   
-    let d = new Date();
-    document.body.innerHTML = "<h1>Time right now is:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
-
-
-
-
-});
-});
-
-
-
-
-   </script>
-results
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE>Un documento con SCRIPT</TITLE>
+<META http-equiv="Content-Script-Type" content="text/tcl">
+</HEAD>
+<BODY>
+    <center>     Bienvenido           </center>
+    <li><a href="vista1.html"target="_blank">Visualizar Vista1</a></li>
+    <li><a href="vista2.html">Visualizar Vista2</a></li>
+    <li><a href="vista3.html">Visualizar Vista3</a></li>
+</SCRIPT>
+</BODY>
+</HTML>
